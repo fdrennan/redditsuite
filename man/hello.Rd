@@ -4,8 +4,17 @@
 \alias{hello}
 \title{hello}
 \usage{
-hello()
+hello(name = "world")
+}
+\arguments{
+\item{name}{Someone's name}
 }
 \description{
 hello
+}
+\examples{
+hello(name = "Freddy")
+}
+\author{
+Freddy Drennan
 }
