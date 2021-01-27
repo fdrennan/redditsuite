@@ -1,0 +1,12 @@
+Package: redditsuite
+Type: Package
+Title: Helps collect and store Reddit data
+Version: 0.1.0
+Author: Freddy Drennan 
+Maintainer: Freddy Drennan <drennanfreddy@gmail.com>
+Description: Helps pull data from praw, the Reddit handler written in Python. 
+    Stores data into a PostgreSQL database.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
