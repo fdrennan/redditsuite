@@ -6,7 +6,7 @@ Author: Freddy Drennan
 Maintainer: Freddy Drennan <drennanfreddy@gmail.com>
 Description: Helps pull data from praw, the Reddit handler written in Python. 
     Stores data into a PostgreSQL database.
-License: What license is it under?
+License: MIT + file LICENSE
 Depends:
     glue
 Encoding: UTF-8
