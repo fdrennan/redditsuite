@@ -1,0 +1,18 @@
+version: '3'
+services:
+  database:
+    image: "postgres:13.1" # use latest official postgres version
+    restart: always
+    ports:
+      - '5432:5432'
+    expose:
+      # Opens port 5432 on the container
+      - '5432'
+      # Where our data will be persisted
+    env_file:
+      - .env # configure postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+
+volumes:
+  postgres-data: # named volumes can be managed easier using docker-compose
