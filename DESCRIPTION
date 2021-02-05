@@ -8,7 +8,11 @@ Description: Helps pull data from praw, the Reddit handler written in Python.
     Stores data into a PostgreSQL database.
 License: MIT + file LICENSE
 Depends:
-    glue
+    glue,
+    RPostgres,
+    dbplyr,
+    DBI,
+    dplyr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
