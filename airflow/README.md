@@ -8,8 +8,10 @@ mkdir dags plugins logs
 
 docker-compose up airflow-init
 
-
 docker exec (container id) airflow version
 
 curl -X GET --user "airflow"airflow" http://localhost:8080/api/v1/dags"
 IRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
+
+
+docker system prune
