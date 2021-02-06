@@ -26,3 +26,13 @@ mtcars_connection %>%
     carb = carb * 2
   ) %>%
   show_query()
+
+
+# reticulate::install_miniconda()
+library(reticulate)
+
+py_config()
+
+praw <- import('praw')
+
+praw$

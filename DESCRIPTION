@@ -12,7 +12,8 @@ Depends:
     RPostgres,
     dbplyr,
     DBI,
-    dplyr
+    dplyr,
+    reticulate
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
