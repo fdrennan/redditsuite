@@ -23,5 +23,6 @@ create table if not exists public.submissions
     is_original_content   bool,
     is_self               bool,
     over_18               bool,
-    visited               bool
+    visited               bool,
+    time_collected_utc    timestamptz
 );

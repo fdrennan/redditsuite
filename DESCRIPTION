@@ -20,7 +20,9 @@ Depends:
     readr,
     tidyr,
     jsonlite,
-    tictoc
+    tictoc,
+    catchr,
+    httr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1

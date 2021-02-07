@@ -26,7 +26,7 @@ cors <- function(req, res) {
 #* @get /submissions
 function(subreddit = "all",
          limit = 5) {
-  limit = as.numeric(limit)
+  limit <- as.numeric(limit)
 
   response <- list(
     status_code = 200,
@@ -41,9 +41,9 @@ function(subreddit = "all",
     )
   )
 
-  if(limit > 100) {
-   response$message <- 'Limit must be less than 100'
-   return(response)
+  if (limit > 100) {
+    response$message <- "Limit must be less than 100"
+    return(response)
   }
 
   response <- tryCatch(
