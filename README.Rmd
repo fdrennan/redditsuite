@@ -69,3 +69,16 @@ If neither can detect , you can set INCLUDE_DIR
 and LIB_DIR manually via:
 R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
 -----------------------------------------------------------------
+
+
+------------------------- ANTICONF ERROR ---------------------------
+Configuration failed because libsodium was not found. Try installing:
+ * deb: libsodium-dev (Debian, Ubuntu, etc)
+ * rpm: libsodium-devel (Fedora, EPEL)
+ * csw: libsodium_dev (Solaris)
+ * brew: libsodium (OSX)
+If libsodium is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a libsodium.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+--------------------------------------------------------------------
