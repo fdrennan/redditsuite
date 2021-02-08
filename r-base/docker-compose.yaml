@@ -9,7 +9,7 @@ services:
     user: 'root'
     volumes:
       - ./main.R:/home/main.R
-      - ./.Renviron:/home/.Renviron
+      - ./.Renviron:/home/.Renviron:ro
       - ./sql:/home/sql
     command: "/usr/bin/Rscript /home/main.R"
     ports:
