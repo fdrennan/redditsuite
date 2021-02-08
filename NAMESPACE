@@ -2,5 +2,6 @@
 
 export(connection_postgres)
 export(connection_reddit)
+export(slack_notify)
 export(submission_pull)
 export(submissions_gather)
