@@ -34,5 +34,4 @@ RUN R -e "library(reticulate);py_install(c('boto3', 'praw'))"
 
 # Install our Packge
 RUN R -e "install.packages('devtools')"
-RUN echo 'Cache 1'
-RUN R -e "devtools::install_github('fdrennan/redditsuite', ref='episode-5-dev')"
+RUN R -e "devtools::install_github('fdrennan/redditsuite', ref='episode-5-dev-1')"

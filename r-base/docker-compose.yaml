@@ -1,14 +1,13 @@
 version: '3.4'
 services:
-  ndexbase:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  rbase:
+    image: fdrennan/redditsuite:latest
     restart: "always"
     user: 'root'
     volumes:
       - ./main.R:/home/main.R
       - ./.Renviron:/home/.Renviron
+      - ./sql:/home/sql
     command: "/usr/bin/Rscript /home/main.R"
     ports:
-      - "80:8787"
+      - "8787:8787"
