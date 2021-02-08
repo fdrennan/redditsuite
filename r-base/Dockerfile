@@ -28,3 +28,10 @@ COPY renv.lock .
 RUN R -e "install.packages('renv')"
 RUN R -e "renv::consent(provided = TRUE);renv::restore()"
 RUN R -e "reticulate::install_miniconda(force=TRUE)"
+
+# Set up reticulate/python
+RUN R -e "library(reticulate);py_install(c('boto3', 'praw'))"
+
+# Install our Packge
+RUN R -e "install.packages('devtools')"
+RUN R -e "devtools::install_github('fdrennan/redditsuite', ref='episode-5-dev')"

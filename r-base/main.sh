@@ -1,1 +1,3 @@
-echo "hello"
+#!/bin/bash
+
+/usr/bin/Rscript /home/main.R
