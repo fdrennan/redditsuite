@@ -15,6 +15,7 @@ submissions_main <- function() {
     time_2 <- toc(quiet = TRUE)
     diff_time <- time_2$toc - time_2$tic
     n_rows_collected <- nrow(results)
+    browser()
     slack_notify(
       glue("{n_rows_collected} rows took {round(diff_time, 2)} seconds to run.")
     )
