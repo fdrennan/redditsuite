@@ -4,7 +4,10 @@
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^LICENSE\.md$
-postgres
+./postgres
 airflow
 r-base
 sql
+logs
+.Renviron
+.env

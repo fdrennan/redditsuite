@@ -1,4 +1,5 @@
-# connection_postgres
+#' connection_postgres
+#' @param POSTGRES_HOST host.docker.internal
 #' @export connection_postgres
 connection_postgres <- function(POSTGRES_HOST = NULL,
                                 POSTGRES_PORT = NULL,

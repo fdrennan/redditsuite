@@ -8,6 +8,7 @@ services:
     user: 'root'
     volumes:
       - ./main.R:/home/main.R
+      - ./.Renviron:/home/.Renviron
     command: "/usr/bin/Rscript /home/main.R"
     ports:
       - "80:8787"
