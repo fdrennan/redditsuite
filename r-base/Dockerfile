@@ -34,4 +34,4 @@ RUN R -e "library(reticulate);py_install(c('boto3', 'praw'))"
 
 # Install our Packge
 RUN R -e "install.packages('devtools')"
-RUN R -e "devtools::install_github('fdrennan/redditsuite', ref='dev')"
+RUN R -e "devtools::install_github('fdrennan/redditsuite', ref='dev-2')"
