@@ -4,7 +4,7 @@
 \alias{submissions_gather}
 \title{submissions gather}
 \usage{
-submissions_gather(subreddit = "all", limit = 100)
+submissions_gather(con, subreddit = "all", limit = 100)
 }
 \description{
 submissions gather

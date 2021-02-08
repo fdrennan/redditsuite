@@ -1,8 +1,8 @@
 #' submissions gather
 #' @export submissions_gather
-submissions_gather <- function(subreddit = "all", limit = 100) {
+submissions_gather <- function(con, subreddit = "all", limit = 100) {
   submissions <- submission_pull(
-    connection_reddit(),
+    con,
     subreddit = subreddit,
     limit = limit
   )

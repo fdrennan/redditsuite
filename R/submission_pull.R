@@ -54,8 +54,11 @@ submission_pull <- function(con, subreddit = NULL, limit = 10,
 
   if (wide) {
     reddit_data <-
-      reddit_data %>%
-      pivot_wider(names_from = name, values_from = object)
+      pivot_wider(
+        reddit_data,
+        names_from = name,
+        values_from = object
+      )
   }
 
   if (to_json) {
