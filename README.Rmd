@@ -54,31 +54,10 @@ git remote add origin git@github.com:fdrennan/redditsuite.git
 git push -u origin main
 ```
 
-------------------------- ANTICONF ERROR ---------------------------
-Configuration failed because libpq was not found. Try installing:
- * deb: libpq-dev (Debian, Ubuntu, etc)
- * rpm: postgresql-devel (Fedora, EPEL)
- * rpm: postgreql8-devel, psstgresql92-devel, postgresql93-devel, or postgresql94-devel (Amazon Linux)
- * csw: postgresql_dev (Solaris)
- * brew: libpq (OSX)
-If libpq is already installed, check that either:
-(i)  'pkg-config' is in your PATH AND PKG_CONFIG_PATH contains
-     a libpq.pc file; or
-(ii) 'pg_config' is in your PATH.
-If neither can detect , you can set INCLUDE_DIR
-and LIB_DIR manually via:
-R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
------------------------------------------------------------------
+```
+library(reticulate)
+install_miniconda()
+# restart rstudio
+py_install(c('boto3', 'praw'))
+```
 
-
-------------------------- ANTICONF ERROR ---------------------------
-Configuration failed because libsodium was not found. Try installing:
- * deb: libsodium-dev (Debian, Ubuntu, etc)
- * rpm: libsodium-devel (Fedora, EPEL)
- * csw: libsodium_dev (Solaris)
- * brew: libsodium (OSX)
-If libsodium is already installed, check that 'pkg-config' is in your
-PATH and PKG_CONFIG_PATH contains a libsodium.pc file. If pkg-config
-is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
-R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
---------------------------------------------------------------------
