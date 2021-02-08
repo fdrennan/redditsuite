@@ -14,7 +14,8 @@ submission_pull(
     "subreddit_subscribers", "thumbnail", "title", "ups", "upvote_ratio", "url",
     "visited"),
   wide = TRUE,
-  to_json = FALSE
+  to_json = FALSE,
+  pretty = FALSE
 )
 }
 \description{

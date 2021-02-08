@@ -53,10 +53,12 @@ function(subreddit = "all",
         connection_reddit(),
         subreddit = "all",
         limit = limit,
-        to_json = TRUE
+        to_json = TRUE,
+        pretty = FALSE
       )
       timer <- toc(quiet = TRUE)
       response$meta_data$runtime <- as.numeric(timer$toc - timer$tic)
+      submissions
     },
     error = function(err) {
       response$status_code <- 400

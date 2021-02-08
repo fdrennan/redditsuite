@@ -15,3 +15,6 @@ IRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
 
 
 docker system prune
+
+docker exec -it airflow_airflow-scheduler_1 bash
+

@@ -9,7 +9,8 @@ submission_pull <- function(con, subreddit = NULL, limit = 10,
                               "thumbnail", "title", "ups", "upvote_ratio", "url", "visited"
                             ),
                             wide = TRUE,
-                            to_json = FALSE) {
+                            to_json = FALSE,
+                            pretty = FALSE) {
   if (!is.null(subreddit)) {
     submission_response <- iterate(con$subreddit(subreddit)$new(limit = limit))
   } else {
@@ -58,7 +59,7 @@ submission_pull <- function(con, subreddit = NULL, limit = 10,
   }
 
   if (to_json) {
-    reddit_data <- toJSON(reddit_data, pretty = TRUE)
+    reddit_data <- toJSON(reddit_data, pretty = pretty)
   }
 
   reddit_data
