@@ -1,7 +1,10 @@
 version: '3.4'
 services:
   rbase:
-    image: fdrennan/redditsuite:latest
+    # image: fdrennan/redditsuite:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: "always"
     user: 'root'
     volumes:

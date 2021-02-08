@@ -7,10 +7,18 @@ submissions_main <- function() {
     print(t_diff)
     time_1 <- tic()
     con <- connection_reddit()
-    results <- submissions_gather(con, subreddit = "all", limit = 200)
+    results <- submissions_gather(
+      con,
+      subreddit = Sys.getenv('SUBREDDIT'),
+      limit = Sys.getenv('NROWS')
+    )
     time_2 <- toc(quiet = TRUE)
     diff_time <- time_2$toc - time_2$tic
-    slack_notify(glue("This took {round(diff_time, 2)} seconds to run."))
+    n_rows_collected <- nrow(results)
+    browser()
+    slack_notify(
+      glue("{n_rows_collected} rows took {round(diff_time, 2)} seconds to run.")
+    )
   }
 }
 tryCatch(submissions_main(), error = function(err) {
