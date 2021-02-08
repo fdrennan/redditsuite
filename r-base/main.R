@@ -11,6 +11,7 @@ alertr('SUBREDDIT = {SUBREDDIT}')
 alertr('NROWS = {NROWS}')
 alertr('Pulling limit `{NROWS}` from `{SUBREDDIT}`')
 
+on.exit(alertr('Stopping submissions....'))
 submissions_main <- function() {
   while ((t_diff <- as.numeric(Sys.time() - init_time)) < n_second) {
     diff_message <- capture.output(t_diff)
