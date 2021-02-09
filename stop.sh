@@ -1,4 +1,4 @@
-#!/bin/bash
+er
 
 docker-compose -f postgres/docker-compose.yaml down
 docker-compose -f airflow/docker-compose.yaml down

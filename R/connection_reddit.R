@@ -1,11 +1,10 @@
 
 #' connection_reddit
 #' @description Given a .Renviron file, connects to reddit
-#' @example
+#' @examples
 #' \dontrun {
 #' connection_reddit()
 #' }
-#'
 #' @export connection_reddit
 connection_reddit <- function() {
   praw <- import("praw")
