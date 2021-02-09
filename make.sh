@@ -18,13 +18,13 @@ docker volume prune
 # sudo chmod 777 airflow/logs
 # sudo chmod 777 airflow/dags
 
-docker-compose -f postgres/docker-compose.yaml down
+docker-compose -f postgres/docker-compose.yaml down --remove-orphans
 # docker-compose -f airflow/docker-compose.yaml down
-docker-compose -f r-base/docker-compose.yaml down
+docker-compose -f r-base/docker-compose.yaml down --remove-orphans
 
 # docker-compose -f airflow/docker-compose.yaml up airflow-init
 docker-compose -f r-base/docker-compose.yaml build
 
 docker-compose -f postgres/docker-compose.yaml up -d
-# docker-compose -f airflow/docker-compose.yaml up -d
+# docker-compose -f airflow/docker-compose.yaml up -d --remove-orphans
 docker-compose -f r-base/docker-compose.yaml up -d
