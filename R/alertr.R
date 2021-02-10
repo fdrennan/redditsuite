@@ -1,6 +1,6 @@
 #' alertr
 #' @export alertr
-alertr <- function(msg, use_glue = TRUE, types = c('slack', 'alert')) {
+alertr <- function(msg, use_glue = TRUE, types = c('alert')) {
   if (use_glue) {
     msg <- glue(msg)
   }

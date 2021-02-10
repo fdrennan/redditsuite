@@ -4,7 +4,7 @@
 \alias{alertr}
 \title{alertr}
 \usage{
-alertr(msg, use_glue = TRUE, types = c("slack", "alert"))
+alertr(msg, use_glue = TRUE, types = c("alert"))
 }
 \description{
 alertr

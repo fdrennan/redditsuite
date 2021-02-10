@@ -4,7 +4,7 @@ curl -Lf0 'http://apache-airflow-docs.s3-website.eu-central-1.amazonaws.com/docs
 
 echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
 
-mkdir dags plugins logs
+mkdir -m 777 dags plugins logs
 
 docker-compose up airflow-init
 
