@@ -1,21 +1,21 @@
 library(redditsuite)
-n_second <- 60*60
+n_second <- 60 * 60
 init_time <- Sys.time()
 
-SUBREDDIT = Sys.getenv('SUBREDDIT')
-NROWS = Sys.getenv('NROWS')
-walk(seq(2, 10, 3), ~ alertr(paste0(rep("=", .), collapse="")))
-walk(seq(2, 10, 3), ~ alertr(paste0(rep("=", .), collapse="")))
-alertr('Starting submission data gathering with parameters---')
-alertr('SUBREDDIT = {SUBREDDIT}')
-alertr('NROWS = {NROWS}')
-alertr('Pulling limit `{NROWS}` from `{SUBREDDIT}`')
+SUBREDDIT <- Sys.getenv("SUBREDDIT")
+NROWS <- Sys.getenv("NROWS")
+walk(seq(2, 10, 3), ~ alertr(paste0(rep("=", .), collapse = "")))
+walk(seq(2, 10, 3), ~ alertr(paste0(rep("=", .), collapse = "")))
+alertr("Starting submission data gathering with parameters---")
+alertr("SUBREDDIT = {SUBREDDIT}")
+alertr("NROWS = {NROWS}")
+alertr("Pulling limit `{NROWS}` from `{SUBREDDIT}`")
 
-on.exit(alertr('Stopping submissions....'))
+on.exit(alertr("Stopping submissions...."))
 submissions_main <- function() {
   while ((t_diff <- as.numeric(Sys.time() - init_time)) < n_second) {
     diff_message <- capture.output(t_diff)
-    alertr(glue('Submissions runtime -- {diff_message}'))
+    alertr(glue("Submissions runtime -- {diff_message}"))
     time_1 <- tic()
     con <- connection_reddit()
     # browser()
@@ -40,4 +40,3 @@ tryCatch(submissions_main(), error = function(err) {
   alertr(as.character(paste0("`", err, "`")))
   alertr("-----------------------------------")
 })
-

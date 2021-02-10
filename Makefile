@@ -1,8 +1,11 @@
-build:
-	rm -r man
-	rm -r NAMESPACE
-	R -e "devtools::document()"
+build: document
 	R -e "devtools::build()"
+
+document: style
+	R -e "devtools::document()"
+
+style:
+	R -e "styler::style_dir('R')"
 
 init:
 	R -e "renv::consent(TRUE)"
