@@ -15,49 +15,13 @@ knitr::opts_chunk$set(
 
 # redditsuite
 
-## Package Setup Notes
-
--   Update DESCRIPTION
-
--   Delete `NAMESPACE`
-
--   Delete `man`
-
--   `install.packages('roxygen2')`
-
--   Go to **Project Options**:
-
-    -   Use Documentation with Roxygen on Install and Restart
-
--   `install.packages('usethis')"`
-
-    -   `usethis::use_readme_rmd()`
-
--  Build Your Package
-
-    - ctrl + shift + b
-
--  Restart R Session
-
-    - ctrl + shift + F10
-
-## GIT
-
-Setting up a new repository on GitHub
-```
-echo "# redditsuite" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:fdrennan/redditsuite.git
-git push -u origin main
+```{r}
+devtools::install_github('fdrennan/redditsuite')
 ```
 
 ```
 library(reticulate)
 install_miniconda()
-# restart rstudio
 py_install(c('boto3', 'praw'))
 ```
 
