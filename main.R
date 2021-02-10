@@ -48,16 +48,16 @@ submissions_main <- function() {
     diff_time <- time_2$toc - time_2$tic
 
     n_rows_collected <- nrow(results)
-    slack_notify(
+    alertr(
       glue("`{n_rows_collected}` rows took `{round(diff_time, 2)}` seconds to run.")
     )
   }
 }
 
 tryCatch(submissions_main(), error = function(err) {
-  slack_notify("--------ERROR-ERROR-ERROR-ERROR-----------")
-  slack_notify(glue("Error time {now(tzone = 'UTC')}"))
-  slack_notify(as.character(paste0("`", err, "`")))
-  slack_notify("-----------------------------------")
+  alertr("--------ERROR-ERROR-ERROR-ERROR-----------")
+  alertr(glue("Error time {now(tzone = 'UTC')}"))
+  alertr(as.character(paste0("`", err, "`")))
+  alertr("-----------------------------------")
 })
 
