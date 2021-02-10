@@ -2,26 +2,6 @@ library(redditsuite)
 n_second <- 60*60
 init_time <- Sys.time()
 
-alertr <- function(msg, use_glue = TRUE, types = c('alert')) {
-  if (use_glue) {
-    msg <- glue(msg)
-  }
-  walk(
-    types,
-    function(x) {
-      switch(
-        x,
-        'slack' = {
-          slack_notify(msg)
-        },
-        'alert' = {
-          cli_alert(msg)
-        }
-      )
-    }
-  )
-}
-
 SUBREDDIT = Sys.getenv('SUBREDDIT')
 NROWS = Sys.getenv('NROWS')
 walk(seq(2, 10, 3), ~ alertr(paste0(rep("=", .), collapse="")))
