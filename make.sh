@@ -6,7 +6,7 @@ cp main.R ./r-base/
 cp -r sql ./r-base/
 cp plumber.R ./r-base/
 
-echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > airflow/.env
+# echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > airflow/.env
 cat airflow/.env
 
 docker volume prune
