@@ -11,3 +11,5 @@ sql
 logs
 .Renviron
 .env
+plumber
+main.r
