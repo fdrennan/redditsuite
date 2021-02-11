@@ -15,80 +15,17 @@ knitr::opts_chunk$set(
 
 # redditsuite
 
-## Package Setup Notes
-
--   Update DESCRIPTION
-
--   Delete `NAMESPACE`
-
--   Delete `man`
-
--   `install.packages('roxygen2')`
-
--   Go to **Project Options**:
-
-    -   Use Documentation with Roxygen on Install and Restart
-
--   `install.packages('usethis')"`
-
-    -   `usethis::use_readme_rmd()`
-
--  Build Your Package
-
-    - ctrl + shift + b
-
--  Restart R Session
-
-    - ctrl + shift + F10
-
-## GIT
-
-Setting up a new repository on GitHub
-```
-echo "# redditsuite" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:fdrennan/redditsuite.git
-git push -u origin main
+```{r}
+devtools::install_github('fdrennan/redditsuite')
 ```
 
-<!-- badges: start -->
+## This package glues this stack together
 
-<!-- badges: end -->
+### [redditstack](https://github.com/fdrennan/redditstack)
 
-The goal of redditsuite is to ...
-
-## Installation
-
-You can install the released version of redditsuite from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("redditsuite")
+```
+library(reticulate)
+install_miniconda()
+py_install(c('boto3', 'praw'))
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(redditsuite)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
