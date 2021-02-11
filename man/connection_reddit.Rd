@@ -9,8 +9,3 @@ connection_reddit()
 \description{
 Given a .Renviron file, connects to reddit
 }
-\examples{
-\dontrun {
-connection_reddit()
-}
-}

@@ -12,9 +12,6 @@ connection_postgres(
   POSTGRES_DB = NULL
 )
 }
-\arguments{
-\item{POSTGRES_HOST}{host.docker.internal}
-}
 \description{
 connection_postgres
 }
