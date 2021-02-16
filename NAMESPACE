@@ -3,6 +3,7 @@
 export(alertr)
 export(connection_postgres)
 export(connection_reddit)
+export(pull_data)
 export(slack_notify)
 export(submission_pull)
 export(submissions_gather)
