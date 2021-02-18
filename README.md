@@ -12,3 +12,17 @@ Git location per episode
 Commands used in Episode 5
 
     wget https://raw.githubusercontent.com/fdrennan/redditsuite/dev-freeze-1/R/connection_postgres.R
+
+## Episode 6
+
+Tips for installing Reticulate
+
+    install.packages('reticulate')
+    library(reticulate)
+    install_miniconda()
+    # restart session
+    py_config()
+    py_install(c('praw', 'boto3'))
+    # maybe restart
+    import('praw')
+    import('boto3')
