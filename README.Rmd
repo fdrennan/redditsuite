@@ -26,3 +26,12 @@ Commands used in Episode 5
 wget https://raw.githubusercontent.com/fdrennan/redditsuite/dev-freeze-1/R/connection_postgres.R
 ```
 
+## Episode 6
+ 
+Installing Reticulate and Python
+```
+install.packages('reticulate')
+library(reticulate)
+install_miniconda()
+py_install(c('boto3', 'praw'))
+```
